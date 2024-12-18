@@ -41,7 +41,7 @@ let a = 0;
 let forward = true;
 
 const geometry = new THREE.BufferGeometry();
-const material = new THREE.LineBasicMaterial({ color: 0xfdcb58, linewidth: 33 });
+const material = new THREE.LineBasicMaterial({ color: 0xfdcb58 });
 const line = new THREE.Line(geometry, material);
 scene.add(line);
 
@@ -106,4 +106,4 @@ window.addEventListener('resize', () => {
   camera.bottom = -5;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-});
+}); 
