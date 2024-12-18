@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Lau 💛</title>
+
+    <meta property="og:title" content="Gráfica de la Fórmula Matemática" />
+    <meta
+      property="og:description"
+      content="Esta página muestra una gráfica interactiva con una fórmula matemática usando Three.js y MathJax."
+    />
+    <meta property="og:image" content="https://tusitio.com/ruta/a/imagen.jpg" />
+    <meta property="og:url" content="https://tusitio.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="Gráfica de la Fórmula Matemática" />
+    <meta
+      name="twitter:description"
+      content="Esta página muestra una gráfica interactiva con una fórmula matemática usando Three.js y MathJax."
+    />
+    <meta
+      name="twitter:image"
+      content="https://tusitio.com/ruta/a/imagen.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        background-color: #110e07;
+      }
+      canvas {
+        display: block;
+      }
+      #formula {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        color: #f6f3ee;
+      }
+      #latex-formula {
+        color: #f6f3ee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="three-container"></div>
+    <div id="formula">
+      <span id="latex-formula">
+        \( y = x^{\frac{2}{3}} + \frac{e}{3} \sqrt{\pi - x^2} \sin(💛 \pi x) \)
+      </span>
+      <br />
+      Donde \(-1 \leq 💛 \leq 1\)
+    </div>
+
+    <script type="module" src="/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        MathJax.typesetPromise()
+          .then(() => {
+            console.log("MathJax renderizado correctamente.");
+          })
+          .catch((err) => console.error("Error al renderizar MathJax:", err));
+      });
+    </script>
+  </body>
+</html>
