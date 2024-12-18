@@ -83,9 +83,9 @@ const animate = () => {
   }
 
   if (forward) {
-    a += 0.05;
+    a += 0.01;
   } else {
-    a -= 0.05;
+    a -= 0.01;
   }
 
   updateCurve();
