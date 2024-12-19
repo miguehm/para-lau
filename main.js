@@ -47,7 +47,7 @@ scene.add(line);
 
 const updateCurve = () => {
   const points = [];
-  const step = 0.03;
+  const step = 0.01;
 
   // left anchor
   points.push(new THREE.Vector3(-10, 1.44, 0));
