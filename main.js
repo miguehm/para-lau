@@ -47,7 +47,7 @@ scene.add(line);
 
 const updateCurve = () => {
   const points = [];
-  const step = 0.01;
+  const step = 0.008;
 
   // left anchor
   points.push(new THREE.Vector3(-10, 1.44, 0));
@@ -74,18 +74,18 @@ const updateCurve = () => {
 
 // animation
 const animate = () => {
-  if (a == 1) {
+  if (a >= 8 && forward) {
     forward = false;
   }
 
-  if (a == -1) {
+  if (a <= -8 && !forward) {
     forward = true;
   }
 
   if (forward) {
-    a += 0.01;
+    a += 0.04;
   } else {
-    a -= 0.01;
+    a -= 0.04;
   }
 
   updateCurve();
